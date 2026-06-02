@@ -1,0 +1,54 @@
+
+//chamar a variavel B
+boolean B;
+
+// ve o bagui quando o programa começa
+void setup(){
+  
+// tamanho janela largura (l)= 400
+// altura = 400
+  size(400,400);
+  noStroke();
+//remover contorno
+}
+
+void draw(){
+
+  if( B ){// DIA
+//se B for essa caceta toda {
+//desenho do sol de dia
+// ceu, circulo amarelo e chao verde claro
+    background(100,200,255);
+// azul claro de ceuzin.
+ // sol
+    fill(255,255,0);
+    ellipse(300,80,80,80);
+
+// chão
+    fill(50,200,50);
+    rect(0,300,400,100);
+  } //fechando o bloquinho q abriu la em cima do B
+//entao
+  // NOITE
+  else{
+//fundo
+    background(20,20,80);
+
+ // lua minguante
+    fill(230);
+    ellipse(300,80,60,60);
+
+ // sombra da lua
+    fill(20,20,80);
+    ellipse(315,80,60,60);
+ // chão
+    fill(20,100,20);
+    rect(0,300,400,100);
+  }
+
+}
+
+void keyPressed(){
+  B = !B;
+  // inverte B. (se estiver F, vira V. Se estiver V, vira F)s
+}
